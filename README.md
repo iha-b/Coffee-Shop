@@ -21,64 +21,68 @@ This project consists of five files:
 
 ## Class Details
 
-### Beverage Class (Beverage.py)
+# Beverage Class
 
-This class represents a general beverage with the following attributes and methods:
+The `Beverage` class represents a general beverage with its size in ounces and price.
 
-- **Attributes**:
-  - `ounces`: A positive integer representing the size of the beverage.
-  - `price`: A positive float representing the price of the beverage.
+### Attributes:
+- `ounces`: The size of the beverage in ounces.
+- `price`: The price of the beverage.
 
-- **Methods**:
-  - `__init__(self, ounces, price)`: Initializes the `Beverage` with size and price.
-  - `updateOunces(self, newOunces)`: Updates the number of ounces.
-  - `updatePrice(self, newPrice)`: Updates the price.
-  - `getOunces(self)`: Returns the ounces of the beverage.
-  - `getPrice(self)`: Returns the price of the beverage.
-  - `getInfo(self)`: Returns a formatted string with the beverage’s ounces and price.
+### Methods:
+- `__init__(self, ounces, price)`: Initializes the beverage with its size and price.
+- `getInfo(self)`: Returns a string representing the beverage information.
 
-**Example**:
+### Example:
 ```python
 b1 = Beverage(16, 20.5)
 print(b1.getInfo())  # Output: "16 oz, $20.50"
-b1 = Beverage(16, 20.5)
-print(b1.getInfo())  # Output: "16 oz, $20.50"```
+```
 
-### Coffee Class
+---
+
+# Coffee Class
 
 The `Coffee` class represents a coffee beverage and extends the `Beverage` class.
 
-- **Attributes**:
+### Attributes:
 - Inherits `ounces` and `price` from `Beverage`.
 - `style`: A string representing the coffee style (e.g., `"Espresso"`).
 
-- **Methods**:
+### Methods:
 - `__init__(self, ounces, price, style)`: Initializes the coffee with its size, price, and style.
 - `getInfo(self)`: Overrides the `getInfo()` method to include the coffee style in the returned string.
 
-**Example**:
+### Example:
 ```python
 c1 = Coffee(8, 3.0, "Espresso")
-print(c1.getInfo())  # Output: "Espresso Coffee, 8 oz, $3.00"```
+print(c1.getInfo())  # Output: "Espresso Coffee, 8 oz, $3.00"
+```
 
-### FruitJuice Class
+---
+
+# FruitJuice Class
 
 The `FruitJuice` class represents a fruit juice beverage and extends the `Beverage` class.
 
-- **Attributes**:
+### Attributes:
 - Inherits `ounces` and `price` from `Beverage`.
 - `fruits`: A list of fruits used in the juice (e.g., `["Apple", "Guava"]`).
 
-- **Methods**:
+### Methods:
 - `__init__(self, ounces, price, fruits)`: Initializes the juice with its size, price, and list of fruits.
 - `getInfo(self)`: Overrides the `getInfo()` method to include the fruits used in the returned string.
 
-**Example**:
+### Example:
 ```python
 juice = FruitJuice(16, 4.5, ["Apple", "Guava"])
-print(juice.getInfo())  # Output: "Apple/Guava Juice, 16 oz, $4.50"```
+print(juice.getInfo())  # Output: "Apple/Guava Juice, 16 oz, $4.50"
+```
+
+---
 
 # DrinkOrder Class
+
 **File:** `DrinkOrder.py`
 
 The `DrinkOrder` class manages a list of beverage objects (either `Coffee` or `FruitJuice`) and calculates the total price of the order.
@@ -103,71 +107,11 @@ print(order.getTotalOrder())
 # Order Items:
 # * Espresso Coffee, 8 oz, $3.00
 # * Apple/Guava Juice, 16 oz, $4.50
-# Total Price: $7.50```
+# Total Price: $7.50
+```
 
+---
 
+# Coffee Class (Repeated for Clarity)
 
-
-### Coffee Class
-
-The `Coffee` class represents a coffee beverage and extends the `Beverage` class.
-
-- **Attributes**:
-- Inherits `ounces` and `price` from `Beverage`.
-- `style`: A string representing the coffee style (e.g., `"Espresso"`).
-
-- **Methods**:
-- `__init__(self, ounces, price, style)`: Initializes the coffee with its size, price, and style.
-- `getInfo(self)`: Overrides the `getInfo()` method to include the coffee style in the returned string.
-
-**Example**:
-```python
-c1 = Coffee(8, 3.0, "Espresso")
-print(c1.getInfo())  # Output: "Espresso Coffee, 8 oz, $3.00"```
-
-### FruitJuice Class
-
-The `FruitJuice` class represents a fruit juice beverage and extends the `Beverage` class.
-
-- **Attributes**:
-- Inherits `ounces` and `price` from `Beverage`.
-- `fruits`: A list of fruits used in the juice (e.g., `["Apple", "Guava"]`).
-
-- **Methods**:
-- `__init__(self, ounces, price, fruits)`: Initializes the juice with its size, price, and list of fruits.
-- `getInfo(self)`: Overrides the `getInfo()` method to include the fruits used in the returned string.
-
-**Example**:
-```python
-juice = FruitJuice(16, 4.5, ["Apple", "Guava"])
-print(juice.getInfo())  # Output: "Apple/Guava Juice, 16 oz, $4.50"```
-
-# DrinkOrder Class
-**File:** `DrinkOrder.py`
-
-The `DrinkOrder` class manages a list of beverage objects (either `Coffee` or `FruitJuice`) and calculates the total price of the order.
-
-### Attributes:
-- `drinks`: A list to store beverage objects.
-
-### Methods:
-- `__init__(self)`: Initializes the order with an empty list of drinks.
-- `addBeverage(self, beverage)`: Adds a beverage to the order.
-- `getTotalOrder(self)`: Returns a formatted string listing all the beverages in the order and the total price.
-
-### Example:
-```python
-c1 = Coffee(8, 3.0, "Espresso")
-juice = FruitJuice(16, 4.5, ["Apple", "Guava"])
-order = DrinkOrder()
-order.addBeverage(c1)
-order.addBeverage(juice)
-print(order.getTotalOrder())
-# Output:
-# Order Items:
-# * Espresso Coffee, 8 oz, $3.00
-# * Apple/Guava Juice, 16 oz, $4.50
-# Total Price: $7.50```
-
-
-
+The `Coffee` class represents a coffee beverage and extends
