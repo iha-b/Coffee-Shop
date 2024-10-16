@@ -40,7 +40,8 @@ This class represents a general beverage with the following attributes and metho
 **Example**:
 ```python
 b1 = Beverage(16, 20.5)
-print(b1.getInfo())  # Output: "16 oz, $20.50"```
+print(b1.getInfo())  # Output: "16 oz, $20.50"
+'''
 
 ### Coffee Class
 
