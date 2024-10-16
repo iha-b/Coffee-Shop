@@ -40,7 +40,7 @@ This class represents a general beverage with the following attributes and metho
 **Example**:
 ```python
 b1 = Beverage(16, 20.5)
-print(b1.getInfo())  # Output: "16 oz, $20.50"
+print(b1.getInfo())  # Output: "16 oz, $20.50"```
 
 ### Coffee Class
 
@@ -57,7 +57,7 @@ The `Coffee` class represents a coffee beverage and extends the `Beverage` class
 **Example**:
 ```python
 c1 = Coffee(8, 3.0, "Espresso")
-print(c1.getInfo())  # Output: "Espresso Coffee, 8 oz, $3.00"
+print(c1.getInfo())  # Output: "Espresso Coffee, 8 oz, $3.00"```
 
 ### FruitJuice Class
 
@@ -74,7 +74,7 @@ The `FruitJuice` class represents a fruit juice beverage and extends the `Bevera
 **Example**:
 ```python
 juice = FruitJuice(16, 4.5, ["Apple", "Guava"])
-print(juice.getInfo())  # Output: "Apple/Guava Juice, 16 oz, $4.50"
+print(juice.getInfo())  # Output: "Apple/Guava Juice, 16 oz, $4.50"```
 
 # DrinkOrder Class
 **File:** `DrinkOrder.py`
@@ -101,7 +101,7 @@ print(order.getTotalOrder())
 # Order Items:
 # * Espresso Coffee, 8 oz, $3.00
 # * Apple/Guava Juice, 16 oz, $4.50
-# Total Price: $7.50
+# Total Price: $7.50```
 
 
 
